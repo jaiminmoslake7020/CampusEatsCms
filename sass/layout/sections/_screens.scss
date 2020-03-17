@@ -1,0 +1,125 @@
+.screens{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-color: $color__orange;
+
+    .section-title{
+        color: $color__white;
+        text-align: left;
+        margin-top: 0;
+        font-size: 30px;
+        padding-top: 15px;
+        padding-left: 20px;
+        font-weight: 300;
+    }
+
+    .sub-section{
+       height: 100vh;
+       display: flex;
+       flex-flow: row nowrap;
+
+       .screen-item{
+           position: relative;
+           min-height: 100vh;
+           min-width: 0;
+           margin-left: 50px;
+           box-sizing: border-box;
+           flex: 0 0 0;
+           transition: flex 2s linear;
+
+           &.active{
+               flex: 1 0 40vw;
+               margin-left: 0;
+
+               .article-title{
+                   text-align: center;
+                   color: $color__white;
+                   margin-top: 0;
+
+                   background-color: transparent;
+                   padding: 15px;
+                   width: 100%;
+                   box-sizing: border-box;
+                   font-size: 20px;
+
+                   position: absolute;
+                   top:0;
+                   left: 0;
+                   min-width: 300px;
+                   width: 100%;
+
+                   transform-origin: 0 0;
+                   transform: rotate(0deg);
+               }
+
+               .screen-box{
+                   display: block;
+                   opacity: 1;
+                   margin-top: 60px;
+
+                   .screen-regular{
+                       text-align: center;
+
+                       img{
+                           opacity: 1;
+                           transform: scale3d(0.3,0.3,0.3);
+                           transition: transform 100ms ease-in-out 2s;
+                       }
+
+                       &.active{
+
+                           img{
+                               height: 80vh;
+                               width: auto;
+                               margin: auto;
+                               transform: scale3d(1,1,1);
+                           }
+
+                       }
+
+                   }
+
+               }
+
+           }
+
+           .screen-box{
+               display: none;
+               opacity: 0;
+               transition: all 1s linear 1s;
+
+               .screen-regular{
+
+                   img{
+                       opacity: 0;
+                   }
+
+               }
+
+           }
+
+           .article-title{
+               text-align: center;
+               color: $color__orange;
+               margin-top: 0px;
+               transform-origin: 0 0;
+               transform: rotate(90deg);
+               position: absolute;
+               top:0;
+               left: 0;
+               width: 100vh;
+               background-color: $color__white;
+               padding: 15px;
+               box-sizing: border-box;
+               font-weight: 100;
+
+               //transition: all 1s linear;
+
+           }
+
+       }
+
+    }
+
+}

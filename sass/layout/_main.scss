@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $color__white;
+  color: $color__black;
+  font-family: $font__sans;
+}
+
+/* SECTIONS ============ */
+
+/* SCREEN SECTION ============ */
+@import "sections/screens";
