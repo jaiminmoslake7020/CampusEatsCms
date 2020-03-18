@@ -17,15 +17,24 @@ body {
 
 .section-title{
   color: $color__white;
+  font-weight: 300;
 }
 
 .main-section.alternate .section-title{
   color: $color__orange;
 }
 
-
+.article-title{
+  font-weight: 100;
+}
 
 /* SECTIONS ============ */
 
 /* SCREEN SECTION ============ */
 @import "sections/screens";
+
+/* TOP SECTION ============ */
+@import "sections/top";
+
+
+

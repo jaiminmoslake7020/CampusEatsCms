@@ -29,7 +29,7 @@ class App{
     setupAnimationEvents(){
         Array.from( document.querySelectorAll('.screen-item:not(.active)>.article-title') , function ( el ) {
             el.addEventListener('click',function () {
-                console.log(this.parentElement)
+                console.log(this.parentElement);
                 app.animateScreen( this.parentElement );
             })
         });
@@ -83,7 +83,6 @@ class App{
 let app = null;
 window.addEventListener('load',function () {
       app = new App();
-
 });
 
 

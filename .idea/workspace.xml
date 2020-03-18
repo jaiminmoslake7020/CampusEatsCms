@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63143848-e335-4e54-8c5f-33eb3cd44fbc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/sass/layout/sections/_top.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
@@ -46,7 +47,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/sass/layout/sections" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -70,7 +71,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1584467253004</updated>
-      <workItem from="1584467267102" duration="20303000" />
+      <workItem from="1584467267102" duration="21861000" />
     </task>
     <task id="LOCAL-00001" summary="new commit">
       <created>1584491482445</created>
@@ -100,7 +101,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584494874224</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Animation events setup">
+      <created>1584499260786</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1584499260786</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,18 +116,19 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="new commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="new commit" />
+    <MESSAGE value="Animation events setup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Animation events setup" />
   </component>
   <component name="WindowStateProjectService">
     <state x="453" y="124" key="#com.intellij.ide.util.MemberChooser" timestamp="1584483216592">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="453" y="124" key="#com.intellij.ide.util.MemberChooser/0.0.1280.800@0.0.1280.800" timestamp="1584483216592" />
-    <state x="249" y="125" key="CommitChangelistDialog2" timestamp="1584494874101">
+    <state x="249" y="125" key="CommitChangelistDialog2" timestamp="1584499260081">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="249" y="105" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1584491481750" />
-    <state x="249" y="125" key="CommitChangelistDialog2/0.23.1280.777@0.23.1280.777" timestamp="1584494874101" />
+    <state x="249" y="125" key="CommitChangelistDialog2/0.23.1280.777@0.23.1280.777" timestamp="1584499260081" />
     <state x="306" y="184" width="667" height="605" key="EditFileWatcherDialog" timestamp="1584490482400">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
@@ -133,9 +142,9 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="240" y="153" key="Vcs.Push.Dialog.v2/0.23.1280.777@0.23.1280.777" timestamp="1584494883013" />
-    <state x="444" y="336" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584497426655">
+    <state x="444" y="336" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584499940427">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="444" y="336" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1280.777@0.23.1280.777" timestamp="1584497426655" />
+    <state x="444" y="336" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1280.777@0.23.1280.777" timestamp="1584499940427" />
   </component>
 </project>

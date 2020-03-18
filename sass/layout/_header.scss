@@ -7,6 +7,8 @@
     top: 0;
     z-index: 100;
     transition: all 2s;
+
+    border-bottom: 5px solid $color__orange;
 }
 .header-menu ul {
     display: flex;
