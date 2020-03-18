@@ -6,6 +6,25 @@ body {
   font-family: $font__sans;
 }
 
+.main-section{
+  min-height: 100vh;
+  background-color: $color__orange ;
+}
+
+.main-section.alternate{
+  background-color: $color__white ;
+}
+
+.section-title{
+  color: $color__white;
+}
+
+.main-section.alternate .section-title{
+  color: $color__orange;
+}
+
+
+
 /* SECTIONS ============ */
 
 /* SCREEN SECTION ============ */
