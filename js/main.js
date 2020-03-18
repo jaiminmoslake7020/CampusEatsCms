@@ -25,25 +25,29 @@ class App{
             let nextElementSibling = null ;
             if( screenItemActive.length === 0 ){
                 nextElementSibling = document.getElementById('screen-content').querySelector('.screen-item');
-                console.log( nextElementSibling );
             }else{
                 nextElementSibling = screenItemActive.nextElementSibling;
-                console.log( nextElementSibling );
             }
 
             if( nextElementSibling === null ){
                 nextElementSibling = document.getElementById('screen-content').querySelector('.screen-item');
             }
 
-            console.log(screenItemActive);
-            console.log(nextElementSibling);
-
             screenItemActive.classList.remove('active');
             nextElementSibling.classList.add('active');
             setTimeout(function () {
-                screenItemActive.querySelector('.screen-regular').classList.remove('active');
-                nextElementSibling.querySelector('.screen-regular').classList.add('active');
-            },1000);
+
+                screenItemActive.querySelector('.screen-box').classList.remove('active');
+                nextElementSibling.querySelector('.screen-box').classList.add('active');
+
+                setTimeout(function () {
+
+                    screenItemActive.querySelector('.screen-regular').classList.remove('active');
+                    nextElementSibling.querySelector('.screen-regular').classList.add('active');
+
+                },100);
+
+            },800);
 
         },5000);
 

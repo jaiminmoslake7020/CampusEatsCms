@@ -388,7 +388,7 @@ body {
   margin-left: 50px;
   box-sizing: border-box;
   flex: 0 0 0;
-  transition: flex 2s linear;
+  transition: flex 700ms linear;
 }
 .screens .sub-section .screen-item.active {
   flex: 1 0 40vw;
@@ -416,27 +416,43 @@ body {
   opacity: 1;
   margin-top: 60px;
 }
-.screens .sub-section .screen-item.active .screen-box .screen-regular {
-  text-align: center;
+.screens .sub-section .screen-item.active .screen-box.active .screen-regular {
+  opacity: 1;
 }
-.screens .sub-section .screen-item.active .screen-box .screen-regular img {
+.screens .sub-section .screen-item.active .screen-box.active .screen-regular img {
   opacity: 1;
   transform: scale3d(0.3, 0.3, 0.3);
-  transition: transform 100ms ease-in-out 2s;
+  transition: transform 1.5s cubic-bezier(1, -0.51, 0, 1.56) 900ms, margin-top 100ms ease-in-out 200ms;
 }
-.screens .sub-section .screen-item.active .screen-box .screen-regular.active img {
+.screens .sub-section .screen-item.active .screen-box.active .screen-regular.active img {
   height: 80vh;
   width: auto;
   margin: auto;
   transform: scale3d(1, 1, 1);
 }
+.screens .sub-section .screen-item.active .screen-box .screen-regular {
+  opacity: 0;
+  text-align: center;
+}
+.screens .sub-section .screen-item.active .screen-box .screen-regular img {
+  margin-top: -130vh;
+  transition: margin-top 2s linear 1.2s, opacity 2s linear 500ms;
+}
 .screens .sub-section .screen-item .screen-box {
   display: none;
   opacity: 0;
-  transition: all 1s linear 1s;
+  transition: all 100ms linear 500ms;
+  height: 100vh;
+  overflow: hidden;
+}
+.screens .sub-section .screen-item .screen-box .screen-regular {
+  opacity: 0;
+  text-align: center;
 }
 .screens .sub-section .screen-item .screen-box .screen-regular img {
   opacity: 0;
+  transition: opacity 1s linear 100s;
+  transform: scale3d(0.3, 0.3, 0.3);
 }
 .screens .sub-section .screen-item .article-title {
   text-align: center;
