@@ -26,7 +26,7 @@
            margin-left: 50px;
            box-sizing: border-box;
            flex: 0 0 0;
-           transition: flex 2s linear;
+           transition: flex 700ms linear;
 
            &.active{
                flex: 1 0 40vw;
@@ -54,45 +54,83 @@
                }
 
                .screen-box{
-                   display: block;
                    opacity: 1;
                    margin-top: 60px;
 
-                   .screen-regular{
-                       text-align: center;
+                   &.active{
 
-                       img{
+                       .screen-regular{
                            opacity: 1;
-                           transform: scale3d(0.3,0.3,0.3);
-                           transition: transform 100ms ease-in-out 2s;
-                       }
-
-                       &.active{
 
                            img{
-                               height: 80vh;
-                               width: auto;
-                               margin: auto;
-                               transform: scale3d(1,1,1);
+                               opacity: 1;
+                               transform: scale3d(0.3,0.3,0.3);
+                               transition: transform 1.5s cubic-bezier(1, -0.51, 0, 1.56) 300ms, margin-top 100ms ease-in-out 0ms;
+                           }
+
+                           &.active{
+
+                               img{
+                                   height: 80vh;
+                                   width: auto;
+                                   margin: auto;
+                                   transform: scale3d(1,1,1);
+                               }
+
                            }
 
                        }
 
                    }
 
+                   .screen-regular{
+                       opacity: 0;
+                       text-align: center;
+
+
+                       img{
+                           transition: margin-top 1s linear 100ms,opacity 2s linear 50ms;
+                       }
+
+                   }
+
+
                }
 
            }
 
            .screen-box{
-               display: none;
                opacity: 0;
-               transition: all 1s linear 1s;
+               transition: opacity 100ms linear 0ms;
+               height: 100vh;
+               overflow: hidden;
+
+               &.active{
+
+                   .screen-regular{
+                       opacity: 0;
+                       text-align: center;
+
+                       img{
+                           opacity: 0;
+                           transition: opacity 1s linear 100s;
+                           transform: scale3d(0.3,0.3,0.3);
+                           margin-top: -130vh;
+                       }
+
+                   }
+
+               }
 
                .screen-regular{
+                   opacity: 0;
+                   text-align: center;
 
                    img{
                        opacity: 0;
+                       transition: opacity 1s linear 100s;
+                       transform: scale3d(0.3,0.3,0.3);
+                       margin-top: -130vh;
                    }
 
                }
@@ -114,7 +152,6 @@
                box-sizing: border-box;
                font-weight: 100;
 
-               //transition: all 1s linear;
 
            }
 
