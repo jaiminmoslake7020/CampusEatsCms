@@ -87,8 +87,9 @@
                        opacity: 0;
                        text-align: center;
 
+
                        img{
-                           transition: margin-top 1s linear 500ms,opacity 2s linear 500ms;
+                           transition: margin-top 1s linear 100ms,opacity 2s linear 50ms;
                        }
 
                    }
@@ -100,7 +101,7 @@
 
            .screen-box{
                opacity: 0;
-               transition: all 100ms linear 500ms;
+               transition: opacity 100ms linear 0ms;
                height: 100vh;
                overflow: hidden;
 
