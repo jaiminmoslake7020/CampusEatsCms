@@ -17,7 +17,7 @@ class App{
         let screenItemActive = document.getElementById('screen-content').querySelector('.screen-item.active');
         let selfObject = this;
         selfObject.makePhoneAppearEffectStart( screenItemActive );
-        
+
         let interval = setInterval(function () {
 
             if( selfObject.stopInterval ){
