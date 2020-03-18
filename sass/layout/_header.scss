@@ -1,0 +1,19 @@
+.site-header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: all 2s;
+}
+.header-menu ul {
+    display: flex;
+}
+.header-menu ul li a{
+    padding: 1.4rem;
+    color: $color__orange;
+    font-weight: bold;
+    font-size: 1.3rem;
+}  

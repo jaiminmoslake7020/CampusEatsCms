@@ -10,7 +10,7 @@ class App{
 
     constructor(){
         this._stopInterval = 0 ;
-        this.screenAnimationSetup();
+       // this.screenAnimationSetup();
     }
 
     screenAnimationSetup(){
