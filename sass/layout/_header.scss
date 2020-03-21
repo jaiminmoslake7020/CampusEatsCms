@@ -3,29 +3,40 @@
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    background-color: $color__white;
+    width: 100%;
+    position: -webkit-sticky;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    z-index: 100000;
     transition: all 2s;
 
     border-bottom: 5px solid $color__orange;
 }
+
+
 .header-menu ul {
     display: flex;
 }
-.header-menu ul li a{
+.header-menu {
+    overflow: hidden;
+}
+
+.header-menu ul li a {
     padding: 1.4rem;
     color: $color__orange;
     font-weight: bold;
     font-size: 1.3rem;
 }
 
-.logopng{
-    max-width: 150px;
-    height: auto;
-    padding: 0 0 0 20px;
+.header-menu ul li a:hover {
+   background-color: $color__orange;
+    color: $color__white;
+    transition: all .5s;
 }
 
-.site-header h1{
+.site-header h1 {
     margin: 0;
 }
+
