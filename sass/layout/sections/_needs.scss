@@ -1,0 +1,93 @@
+.needs{
+
+  .sub-section{
+    display: flex;
+    align-content: center;
+    flex-flow: row wrap;
+    height: 100vh;
+
+
+      .question{
+          flex: 1 0 100%;
+          font-size: 40px;
+          font-weight: 900;
+          font-style:italic;
+          opacity: 0;
+          padding: 20px 40px;
+          transform: translateX( 200px );
+          transition: all 1s linear;
+          color: $color__white;
+          //text-transform: uppercase;
+          margin: 20px 0 0 0;
+
+          &.active{
+            opacity: 1;
+            transform: translateX(0);
+          }
+
+      }
+
+      .answer-box{
+
+          .answers{
+            font-size: 30px;
+            font-weight: 900;
+            font-style:italic;
+            opacity: 0;
+            padding: 20px 20px;
+            color: $color__orange;
+            transform: translateX( 10px );
+            //text-transform: uppercase;
+
+            background-color: $color__white;
+            box-sizing: border-box;
+            width: 90%;
+            margin: 15px 40px;
+            display: flex;
+            align-items: center;
+
+            -webkit-box-shadow: 18px 28px 16px -25px rgba(255,255,255,0.35);
+            -moz-box-shadow: 18px 28px 16px -25px rgba(255,255,255,0.35);
+            box-shadow: 18px 28px 16px -25px rgba(255,255,255,0.35);
+            align-content: center;
+
+            .icon-box{
+              padding: 0 10px 0 0 ;
+
+            }
+
+            .text-info{
+              padding: 0 0 0 10px ;
+              border-left: 1px solid $color__orange;
+
+                p{
+                  margin: 0;
+                }
+
+            }
+
+            &.answer-1{
+              transition: transform .5s linear 1s, opacity .5s linear 1s ;
+            }
+
+            &.answer-2{
+              transition: transform .5s linear 1.2s, opacity .5s linear 1.2s ;
+            }
+
+            &.answer-3{
+              transition: transform .5s linear 1.6s, opacity .5s linear 1.6s ;
+            }
+
+
+            &.active{
+              opacity: 1;
+              transform: translateX(0);
+            }
+
+
+          }
+      }
+
+  }
+
+}

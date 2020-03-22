@@ -13,27 +13,31 @@
     transition: all 2s;
 
     border-bottom: 5px solid $color__orange;
+
+    -webkit-box-shadow: -17px 28px 16px -25px rgba(241,90,36,0.35);
+    -moz-box-shadow: -17px 28px 16px -25px rgba(241,90,36,0.35);
+    box-shadow: -17px 28px 16px -25px rgba(241,90,36,0.35);
 }
 
 
 .header-menu ul {
     display: flex;
-}
-.header-menu {
-    overflow: hidden;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .header-menu ul li a {
-    padding: 1.4rem;
+    padding: 24px;
     color: $color__orange;
-    font-weight: bold;
-    font-size: 1.3rem;
+    font-weight: 300;
+    font-size: 16px;
+    display: block;
 }
 
 .header-menu ul li a:hover {
-   background-color: $color__orange;
+    background-color: $color__orange;
     color: $color__white;
-    transition: all .5s;
+    transition: background-color 1s linear, color .1s linear;
 }
 
 .site-header h1 {

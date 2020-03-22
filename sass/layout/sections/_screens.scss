@@ -2,10 +2,9 @@
     height: 100vh;
     width: 100vw;
     position: relative;
-    background-color: $color__orange;
+    overflow: hidden;
 
     .section-title{
-        color: $color__white;
         text-align: left;
         margin-top: 0;
         font-size: 30px;
@@ -33,8 +32,8 @@
 
                .article-title{
                    text-align: center;
-                   color: $color__white;
                    margin-top: 0;
+                   color: $color__orange;
 
                    background-color: transparent;
                    padding: 15px;
@@ -46,10 +45,16 @@
                    top:0;
                    left: 0;
                    min-width: 300px;
-                   width: 100%;
-
                    transform-origin: 0 0;
                    transform: rotate(0deg);
+
+                   span{
+                       transform: unset;
+                       display: unset;
+                       padding: unset;
+                       font-weight: unset;
+                       text-transform: unset;
+                   }
                }
 
                .screen-box{
@@ -138,7 +143,6 @@
 
            .article-title{
                text-align: center;
-               color: $color__orange;
                margin-top: 0px;
                transform-origin: 0 0;
                transform: rotate(90deg);
@@ -146,10 +150,18 @@
                top:0;
                left: 0;
                width: 100vh;
-               background-color: $color__white;
+               background-color: $color__orange;
                padding: 15px;
                box-sizing: border-box;
                cursor:pointer;
+
+               span{
+                   transform: rotateZ(-90deg);
+                   display: inline-block;
+                   padding: 0 5px;
+                   font-weight: bold;
+                   text-transform: uppercase;
+               }
 
            }
 

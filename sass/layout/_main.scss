@@ -9,6 +9,7 @@ body {
 .main-section{
   min-height: 100vh;
   background-color: $color__orange ;
+  overflow: hidden;
 }
 
 .main-section.alternate{
@@ -16,8 +17,13 @@ body {
 }
 
 .section-title{
-  color: $color__white;
   font-weight: 300;
+  color: $color__white;
+  text-align: left;
+  margin-top: 0;
+  font-size: 30px;
+  padding-top: 15px;
+  padding-left: 20px;
 }
 
 .main-section.alternate .section-title{
@@ -26,6 +32,11 @@ body {
 
 .article-title{
   font-weight: 100;
+  color: $color__orange;
+}
+
+.main-section.alternate .article-title{
+  color: $color__white;
 }
 
 /* SECTIONS ============ */
@@ -35,6 +46,9 @@ body {
 
 /* TOP SECTION ============ */
 @import "sections/top";
+
+/* TOP SECTION ============ */
+@import "sections/needs";
 
 
 
