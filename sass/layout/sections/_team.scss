@@ -1,0 +1,35 @@
+.team {
+    display: grid;
+    grid-template-rows: .1fr 1fr;
+    background-color: $color__white;
+}
+.team h1 {
+    flex-basis: 100%;
+}
+.team figure {
+    display: flex;
+    flex-flow: row wrap;
+    text-align: center;
+    justify-content: center;
+}
+.team figure div {
+    flex-basis: 25%;
+}
+.team figure img {
+    width: 55%;
+    height: auto;
+    //border-radius: 50%;
+    padding: 0.8rem;
+    //border: 2px solid $color__green;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border-left: 1px solid $color__orange;
+    border-right: 1px solid $color__orange;
+}
+.team figure img:hover {
+    transform: rotate(90deg);
+    transform: scale(1.2);
+    //filter: sepia(60%);
+    //border: none;
+    transition: all .9s;
+}
