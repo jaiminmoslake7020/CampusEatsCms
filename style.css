@@ -348,6 +348,10 @@ template {
 
 /* variables ======================= */
 /* typography ======================= */
+h2 {
+  padding: 0.6rem;
+}
+
 /* layout ======================= */
 /* HEEADER ============ */
 .site-header {
@@ -722,6 +726,214 @@ body {
   transform: translateX(0);
 }
 
+/* TEAM SECTION =========== */
+.team {
+  display: grid;
+  grid-template-rows: 0.1fr 1fr;
+  background-color: #fff;
+}
+
+.team h1 {
+  flex-basis: 100%;
+}
+
+.team figure {
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+  justify-content: center;
+}
+
+.team figure div {
+  flex-basis: 25%;
+}
+
+.team figure img {
+  width: 55%;
+  height: auto;
+  padding: 0.8rem;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border-left: 1px solid #f15a24;
+  border-right: 1px solid #f15a24;
+}
+
+.team figure img:hover {
+  transform: rotate(90deg);
+  transform: scale(1.2);
+  transition: all 0.9s;
+}
+
+/* TEAM TESTIMONIALS =========== */
+/* TESTIMONIAL IMAGES============= */
+.testimonials .sub-section img {
+  max-width: 30%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.sub-section .testimonials img {
+  position: absolute;
+  bottom: 150px;
+}
+
+/* TESTIMONIAL CONTENT=============== */
+.sub-section {
+  display: flex;
+  align-content: center;
+  align-self: center;
+}
+
+.sub-section .testimonial {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  color: #f15a24;
+  max-width: 40%;
+  height: auto;
+  margin-bottom: 1rem !important;
+  margin: auto;
+}
+
+.testimonial:hover {
+  background-color: #f15a24;
+  color: #fff;
+  transition: all 0.9s;
+}
+
+/* TESTIMONIAL TYPOGRAPHY=========== */
+.testimonial p {
+  max-width: 90%;
+  margin: auto;
+  font-size: 1.2rem;
+  margin-bottom: 1rem !important;
+}
+
+.testimonial h3 {
+  padding: 0.5rem;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+/* VISIBLITY OF OTHER TESTIMONIALS */
+.testimonial.testimonial-user3 {
+  display: none;
+}
+
+.testimonial.testimonial-user4 {
+  display: none;
+}
+
+.testimonial.testimonial-user5 {
+  display: none;
+}
+
+.testimonial.testimonial-user6 {
+  display: none;
+}
+
+/* FOOTER CONTENT ============*/
+footer {
+  background-color: #f15a24;
+  color: white;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.footer-class {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.7rem;
+  padding-top: 2rem;
+  max-width: 98%;
+  margin: auto;
+}
+
+.fas {
+  padding-right: 0.5rem;
+}
+
+/* FOOTER FIRST CHILD ==================== */
+.footer-text {
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.8rem;
+}
+
+.footer-text p {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.footer-text h2 {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 0.9rem;
+}
+
+/* FOOTER SECOND CHILD ==================== */
+.footer-information {
+  align-items: center;
+}
+
+.footer-information p {
+  border: 1px solid #fffdf7;
+  max-width: 200px;
+  margin: 0.5rem auto 0.5rem auto;
+  padding: 0.6rem;
+}
+
+.footer-information p i {
+  padding-right: 0.9rem;
+}
+
+.footer-information h2 {
+  padding: 0;
+  padding-bottom: 0.5rem;
+  margin: 0;
+}
+
+/* FOOTER THIRD CHILD ==================== */
+.footer-subscribe p {
+  font-size: 2rem;
+  padding: 0;
+}
+
+.footer-subscribe h2 {
+  margin: 0;
+  padding: 0;
+}
+
+/* FOOTER FOURTH CHILD ==================== */
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  grid-column: 2;
+  grid-row: 3;
+}
+
+.footer-icons p {
+  border-bottom: none;
+  color: white;
+}
+
+.footer-copyright {
+  grid-column: 2;
+}
+
+.footer-copyright p {
+  border-bottom: 2px solid #fffdf7;
+  padding: 1rem;
+}
+
+.fab {
+  font-size: 2rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+}
+
 /* layout ======================= */
 body {
   margin: 0;
@@ -740,6 +952,26 @@ a {
 }
 
 /* HEEADER ============ */
+.download-btn .google {
+  max-width: 29% !important;
+  height: auto;
+  padding: 1rem;
+}
+
+.download-btn .apple {
+  max-width: 31.4% !important;
+  height: auto;
+  padding: 1rem;
+}
+
+.footer-subscribe button {
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 0.45rem;
+  background-color: #000;
+  color: #fff;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -748,6 +980,12 @@ img {
 /* Navigation ======================= */
 /* site ======================= */
 /* forms ======================= */
+input {
+  width: 300px;
+  height: 4vh;
+  margin-top: 1rem;
+}
+
 /* media ======================= */
 img {
   max-width: 100%;

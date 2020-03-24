@@ -18,9 +18,7 @@
 .team figure img {
     width: 55%;
     height: auto;
-    //border-radius: 50%;
     padding: 0.8rem;
-    //border: 2px solid $color__green;
     box-sizing: border-box;
     border-radius: 50%;
     border-left: 1px solid $color__orange;
@@ -29,7 +27,5 @@
 .team figure img:hover {
     transform: rotate(90deg);
     transform: scale(1.2);
-    //filter: sepia(60%);
-    //border: none;
     transition: all .9s;
 }
