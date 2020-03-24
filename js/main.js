@@ -39,10 +39,21 @@ class App extends base{
         return this._needs;
     }
 
+    get features() {
+        return this._features;
+    }
+
+    get team() {
+        return this._team;
+    }
+
+    get testimonials() {
+        return this._testimonials;
+    }
+
     get screens() {
         return this._screens;
     }
-
 
     get scroll() {
         return this._scroll;
@@ -52,6 +63,9 @@ class App extends base{
         super();
         this._topSection = new topSection();
         this._needs = new needs();
+        this._features = new features();
+        this._team = new team();
+        this._testimonials = new testimonials();
         this._screens = new screens();
         this._scroll = new scroll();
 
@@ -252,6 +266,75 @@ class needs extends base{
 
     }
 
+
+}
+
+class features extends base{
+
+    constructor() {
+        super();
+    }
+
+    init() {
+        super.init();
+
+    }
+
+    activate(id) {
+        super.activate(id);
+        this.init()
+    }
+
+    deActivate(id) {
+        super.deActivate(id);
+
+    }
+
+}
+
+class team extends base{
+
+    constructor() {
+        super();
+    }
+
+    init() {
+        super.init();
+
+    }
+
+    activate(id) {
+        super.activate(id);
+        this.init()
+    }
+
+    deActivate(id) {
+        super.deActivate(id);
+
+    }
+
+}
+
+class testimonials extends base{
+
+    constructor() {
+        super();
+    }
+
+    init() {
+        super.init();
+
+    }
+
+    activate(id) {
+        super.activate(id);
+        this.init()
+    }
+
+    deActivate(id) {
+        super.deActivate(id);
+
+    }
 
 }
 
