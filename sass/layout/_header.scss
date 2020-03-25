@@ -1,15 +1,15 @@
 .site-header {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
     background-color: $color__white;
-    width: 100%;
+    width: 100vw;
     position: -webkit-sticky;
     position: fixed;
-    top: 0px;
+    top: 0;
     left: 0;
-    z-index: 100000;
+    z-index: 1000;
     transition: all 2s;
 
     border-bottom: 5px solid $color__orange;
@@ -17,6 +17,57 @@
     -webkit-box-shadow: -17px 28px 16px -25px rgba(241,90,36,0.35);
     -moz-box-shadow: -17px 28px 16px -25px rgba(241,90,36,0.35);
     box-shadow: -17px 28px 16px -25px rgba(241,90,36,0.35);
+
+   .button-con{
+
+       button{
+           appearance: none;
+           border: 1px solid $color__orange;
+           padding: 10px ;
+           margin: 10px;
+           box-sizing: border-box;
+           border-radius: 3px;
+           background-color: white;
+
+           &:hover{
+               border: 1px solid $color__white;
+               background-color: $color__orange;
+               transition: all 1s;
+
+               i{
+                   color: $color__white;
+               }
+           }
+
+           i{
+               color: $color__orange;
+               padding-right: 0;
+           }
+       }
+
+       flex: 0 0 0;
+       overflow: hidden;
+       @media screen and (max-width:800px) {
+           flex-grow: 1;
+           overflow: auto;
+           text-align: right;
+
+           button{
+           }
+       }
+   }
+
+   .header-menu{
+       @media screen and (max-width:800px) {
+           flex: 0 0 0;
+           overflow: hidden;
+       }
+   }
+
+    nav{
+        flex-grow: 1;
+    }
+
 }
 
 
@@ -24,6 +75,8 @@
     display: flex;
     margin-top: 0;
     margin-bottom: 0;
+    justify-content: flex-end;
+
 }
 
 .header-menu ul li a {

@@ -1,25 +1,38 @@
 .team {
     display: grid;
     grid-template-rows: .1fr 1fr;
-    background-color: $color__white;
+    @media screen and (max-width: 600px){
+        grid-template-rows: auto auto;
+    }
 
-    opacity: 0.3;
-    transform: translateY(100px);
-    transition: all 1s linear;
+    .sub-section{
+        opacity: 0;
+        transform: translateY(100px);
+        transition: all 1s linear;
+        pointer-events: none;
+    }
+
+    &.active{
+
+        .sub-section{
+            pointer-events: auto;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+    }
+
 
     h3{
-        color: $color__orange;
+        color: $color__white;
     }
 
     p{
-        color: $color__orange;
+        color: $color__white;
     }
 }
 
-.team.active{
-    opacity: 1;
-    transform: translateY(0);
-}
+
 
 .team h1 {
     flex-basis: 100%;
@@ -29,11 +42,21 @@
     flex-flow: row wrap;
     text-align: center;
     justify-content: center;
+    @media screen and (max-width: 900px){
+        justify-content: space-around;
+    }
 }
 .team figure div {
     flex-basis: 25%;
+    @media screen and (max-width: 900px){
+        flex-basis: 35%;
+    }
+    @media screen and (max-width: 600px){
+        flex-basis: 100%;
+    }
 }
 .team figure img {
+    background-color: white;
     width: 55%;
     height: auto;
     padding: 0.8rem;

@@ -7,7 +7,13 @@ body {
 }
 
 .main-section{
-  min-height: 100vh;
+  min-height: 90vh;
+  @media screen and (max-width: 900px){
+    min-height: auto;
+  }
+  @media screen and (max-width: 1050px){
+    min-height: auto;
+  }
   background-color: $color__orange ;
   overflow: hidden;
 }

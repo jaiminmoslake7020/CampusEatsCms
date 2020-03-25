@@ -6,6 +6,15 @@
     flex-flow: row wrap;
     height: 100vh;
 
+    @media screen and (max-width: 1050px){
+      height: fit-content;
+      padding: 50px 0;
+    }
+    @media screen and (max-width: 700px){
+      height: unset;
+      padding: 50px 0;
+    }
+
 
       .question{
           flex: 1 0 100%;
@@ -42,9 +51,13 @@
             background-color: $color__white;
             box-sizing: border-box;
             width: 90%;
-            margin: 15px 40px;
+            margin: 15px auto;
             display: flex;
             align-items: center;
+
+            @media screen and (max-width: 400px){
+              margin: 15px auto;
+            }
 
             -webkit-box-shadow: 18px 28px 16px -25px rgba(255,255,255,0.35);
             -moz-box-shadow: 18px 28px 16px -25px rgba(255,255,255,0.35);
@@ -53,6 +66,10 @@
 
             .icon-box{
               padding: 0 10px 0 0 ;
+
+              @media screen and (max-width: 600px){
+                display: none;
+              }
 
             }
 

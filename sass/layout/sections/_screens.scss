@@ -3,6 +3,9 @@
     width: 100vw;
     position: relative;
     overflow: hidden;
+    @media screen and (max-width: 600px){
+        height: unset;
+    }
 
     .section-title{
         text-align: left;
@@ -14,26 +17,131 @@
 
     .sub-section{
        height: 100vh;
+        @media screen and (max-width: 600px){
+            height: unset;
+        }
        display: flex;
        flex-flow: row nowrap;
 
-       .screen-item{
+        @media screen and (max-width: 1050px){
+            &.screen-active-1{
+                margin-left: 0;
+            }
+            &.screen-active-2{
+                margin-left: 0;
+            }
+            &.screen-active-3{
+                margin-left: 0;
+            }
+            &.screen-active-4{
+                margin-left: -50px;
+            }
+            &.screen-active-5{
+                margin-left: -100px;
+            }
+            &.screen-active-6{
+                margin-left: -150px;
+            }
+            &.screen-active-7{
+                margin-left: -200px;
+            }
+            &.screen-active-8{
+                margin-left: -250px;
+            }
+            &.screen-active-9{
+                margin-left: -300px;
+            }
+            &.screen-active-10{
+                margin-left: -350px;
+            }
+            &.screen-active-11{
+                margin-left: -400px;
+            }
+            &.screen-active-12{
+                margin-left:-450px;
+            }
+            &.screen-active-13{
+                margin-left:-500px;
+            }
+        }
+
+        @media screen and (max-width: 600px){
+            &.screen-active-1{
+                margin-left: 0;
+            }
+            &.screen-active-2{
+                margin-left: 0;
+            }
+            &.screen-active-3{
+                margin-left: 0;
+            }
+            &.screen-active-4{
+                margin-left: 0;
+            }
+            &.screen-active-5{
+                margin-left: 0;
+            }
+            &.screen-active-6{
+                margin-left: 0;
+            }
+            &.screen-active-7{
+                margin-left: 0;
+            }
+            &.screen-active-8{
+                margin-left: 0;
+            }
+            &.screen-active-9{
+                margin-left: 0;
+            }
+            &.screen-active-10{
+                margin-left:0;
+            }
+            &.screen-active-11{
+                margin-left: 0;
+            }
+            &.screen-active-12{
+                margin-left:0;
+            }
+            &.screen-active-13{
+                margin-left:0;
+            }
+        }
+
+        .screen-item{
            position: relative;
            min-height: 100vh;
+           @media screen and (max-width: 600px){
+               height: unset;
+           }
+
            min-width: 0;
            margin-left: 50px;
            box-sizing: border-box;
            flex: 0 0 0;
            transition: flex 700ms linear;
+           @media screen and (max-width: 600px){
+               display: none;
+           }
 
            &.active{
                flex: 1 0 40vw;
+               @media screen and (max-width: 1050px){
+                   flex: 1 0 75vw;
+               }
+
                margin-left: 0;
+               @media screen and (max-width: 600px){
+                   display: block;
+               }
 
                .article-title{
+                   @media screen and (max-width: 600px){
+                       display: block;
+                   }
+
                    text-align: center;
                    margin-top: 0;
-                   color: $color__orange;
+                   color: $color__white;
                    border:unset;
 
                    background-color: transparent;
@@ -157,6 +265,9 @@
                padding: 15px;
                box-sizing: border-box;
                cursor:pointer;
+               @media screen and (max-width: 600px){
+                   display: none;
+               }
 
                span{
                    transform: rotateZ(-90deg);

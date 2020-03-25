@@ -2,6 +2,16 @@ let app = null;
 window.addEventListener('load',function () {
     app = new App();
     app.scroll.init();
+
+    document.getElementById('mainMenu').addEventListener('click',function () {
+        document.querySelector('.side-menu').classList.toggle('menu-activated');
+    });
+
+    document.querySelector('.side-menu').addEventListener('click',function () {
+        document.querySelector('.side-menu').classList.toggle('menu-activated');
+    });
+
+
 });
 
 
@@ -184,7 +194,7 @@ class screens extends base {
         let selfObject = this;
         Array.from( document.querySelectorAll('.screen-item:not(.active)>.article-title') , function ( el ) {
             el.addEventListener('click',function () {
-                console.log(this.parentElement);
+                // console.log(this.parentElement);
                 selfObject.animateScreen( this.parentElement );
             })
         });
@@ -197,6 +207,16 @@ class screens extends base {
         }
         screenItemActive.classList.remove('active');
         nextElementSibling.classList.add('active');
+        let screenItems = document.querySelectorAll('.screen-item');
+        for( let i = 0 ; i < screenItems.length ; i++ ) {
+            document.getElementById('screen-content').querySelector('.sub-section').classList.remove('screen-active-'+i);
+        }
+        Array.from(screenItems , function ( el , index ) {
+             if( el.classList.contains('active') ){
+                 document.getElementById('screen-content').querySelector('.sub-section').classList.add('screen-active-'+index);
+             }
+        });
+        document.getElementById('screen-content').querySelector('.sub-section').classList.remove('screen-active-0');
         this.makePhoneAppearEffect( screenItemActive , nextElementSibling );
     }
 
@@ -362,12 +382,12 @@ class testimonials extends base{
         let totalSlides = document.getElementById('testimonials-content').querySelector('.sub-section').querySelectorAll('.testimonial').length/2;
 
         let selfObject = this;
-        console.log( console.trace() );
+        // console.log( console.trace() );
         let interval = setInterval(function () {
             if( selfObject.stopInterval ){
                 clearInterval( interval );
             }
-            console.log( console.trace() );
+            // console.log( console.trace() );
             selfObject.slide( selfObject.slideNumber );
         },5000);
 
@@ -409,6 +429,22 @@ class testimonials extends base{
 class scroll extends base{
     constructor() {
         super();
+
+        let aList = document.querySelectorAll('header nav>ul>li>a');
+        Array.from( aList , function ( el , index ) {
+            el.addEventListener('click', aClick );
+        });
+
+        aList = document.querySelectorAll('.side-menu nav>ul>li>a');
+        Array.from( aList , function ( el , index ) {
+            el.addEventListener('click', aClick );
+        });
+
+        aList = document.querySelectorAll('.footer-information ul>li>a');
+        Array.from( aList , function ( el , index ) {
+            el.addEventListener('click', aClick );
+        });
+
     }
 
     init() {
@@ -422,18 +458,18 @@ class scroll extends base{
             let sectionTopPoint = section.offsetTop ;
             let sectionBottomPoint = section.offsetTop+section.offsetHeight ;
 
-            if(  section.id === "top-content" ){
-                console.log(  sectionTopPoint );
-                console.log( usePageTop );
-                console.log(  sectionBottomPoint );
-
-                console.log(  sectionTopPoint <= usePageTop );
-                console.log( ( sectionTopPoint === 0 && usePageTop < 400 )  );
-                console.log( sectionBottomPoint > usePageTop   );
-                console.log( selfObject._pageStatus !== section.id  );
-                console.log( selfObject._pageStatus  );
-                console.log(  section.id  );
-            }
+            // if(  section.id === "top-content" ){
+            //     console.log(  sectionTopPoint );
+            //     console.log( usePageTop );
+            //     console.log(  sectionBottomPoint );
+            //
+            //     console.log(  sectionTopPoint <= usePageTop );
+            //     console.log( ( sectionTopPoint === 0 && usePageTop < 400 )  );
+            //     console.log( sectionBottomPoint > usePageTop   );
+            //     console.log( selfObject._pageStatus !== section.id  );
+            //     console.log( selfObject._pageStatus  );
+            //     console.log(  section.id  );
+            // }
 
             if( ( sectionTopPoint <= usePageTop || ( sectionTopPoint === 0 && usePageTop < 400 ) ) && sectionBottomPoint > usePageTop && selfObject._pageStatus !== section.id ){
                 console.log('at '+section.id);
@@ -477,9 +513,30 @@ class scroll extends base{
 }
 
 
+document.onkeydown = function(evt) {
+    evt = evt || window.event;
+    var isEscape = false;
+    if ("key" in evt) {
+        isEscape = (evt.key === "Escape" || evt.key === "Esc");
+    } else {
+        isEscape = (evt.keyCode === 27);
+    }
+    if (isEscape) {
+        document.querySelector('.side-menu').classList.remove('menu-activated');
+    }
+};
 
 
-
+let aClick = ( e ) => {
+    e.preventDefault();
+    let href = e.target.getAttribute('href');
+    href = href.replace('#','');
+    let offsetTop = document.getElementById(href).offsetTop-100;
+    window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth',
+    });
+};
 
 
 

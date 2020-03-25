@@ -17,4 +17,8 @@
     padding: 0.45rem;
     background-color: $color__black;
     color: $color__white;
+
+    @media screen and (max-width: 900px){
+        padding: 20px;
+    }
 }

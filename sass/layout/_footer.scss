@@ -1,13 +1,20 @@
 
 footer{
-    background-color: $color__orange;
-    color: white;
+    background-color: $color__white;
+    color: $color__orange;
     text-align: center;
-    margin-top: 1rem;
 }
 .footer-class {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    @media screen and (max-width: 600px){
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+    }
+    @media screen and (max-width: 900px){
+        grid-template-columns: repeat(2 ,1fr);
+        grid-template-rows: repeat(2, auto);
+    }
     grid-gap: 0.7rem;
     padding-top: 2rem;
     max-width: 98%;
@@ -22,6 +29,10 @@ footer{
     max-width: 800px;
     margin: auto;
     line-height: 1.8rem;
+    @media screen and (max-width: 600px){
+        grid-column: 1;
+        grid-row: 1;
+    }
 }
 .footer-text p {
     font-size: 1.3rem;
@@ -38,15 +49,35 @@ footer{
 
 .footer-information {
     align-items: center;
-}
-.footer-information p {
-    border: 1px solid $color_bs1;
-    max-width: 200px;
-    margin: 0.5rem auto 0.5rem auto;;
-    padding: 0.6rem;
-}
-.footer-information p i {
-    padding-right: 0.9rem;
+    @media screen and (max-width: 600px){
+        grid-column: 1;
+        grid-row: 2;
+    }
+    @media screen and (max-width: 900px){
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    a{
+        max-width: 200px;
+        margin: 0.5rem auto 0.5rem auto;;
+        padding: 0.6rem;
+        color: $color__orange;
+        border: 1px solid $color__orange;
+        display: block;
+        transition: all 1s ;
+
+        &:hover{
+            background-color: $color__orange;
+            color: $color__white;
+            border: 1px solid $color__orange;
+        }
+
+        i {
+            padding-right: 0.9rem;
+        }
+    }
+
 }
 .footer-information h2 {
     padding: 0;
@@ -77,15 +108,47 @@ footer{
     display: flex;
     justify-content: center;
     grid-column: 2;
-    grid-row: 3;
+    grid-row: 2;
+    @media screen and (max-width: 600px){
+        grid-column: 1;
+        grid-row: 3;
+    }
+    @media screen and (max-width: 900px){
+        grid-column: -1/1;
+        grid-row: 4;
+    }
+
+    ul{
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    a {
+        i{
+            border-bottom: none;
+            color: $color__orange;
+        }
+
+        &:hover{
+            i{
+                color: $color__orangedark;
+            }
+        }
+    }
 }
 
-.footer-icons p {
-    border-bottom: none;
-    color: white;
-}
 .footer-copyright {
     grid-column: 2;
+    grid-row: 3;
+    @media screen and (max-width: 600px){
+        grid-column: 1;
+        grid-row: 5;
+        margin-bottom: 20px;
+    }
+    @media screen and (max-width: 900px){
+        grid-column: -1/1;
+        grid-row: 5;
+    }
 }
 .footer-copyright  p {
     border-bottom: 2px solid $color_bs1;
@@ -97,4 +160,15 @@ footer{
     font-size: 2rem;
     padding-right: 1rem;
     padding-bottom: 1rem;
+}
+
+.footer-contact{
+    @media screen and (max-width: 600px){
+        grid-column: 1;
+        grid-row: 4;
+    }
+    @media screen and (max-width: 900px){
+        grid-column: -1/1;
+        grid-row: 3;
+    }
 }

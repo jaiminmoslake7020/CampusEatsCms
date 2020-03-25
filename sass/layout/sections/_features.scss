@@ -1,23 +1,54 @@
 .features-container{
   min-height: 90vh;
+  @media screen and (max-width: 1050px){
+    min-height: fit-content;
+  }
+
+  @media screen and (max-width: 960px){
+    height: unset;
+  }
 
   .sub-section{
     display: flex;
     align-content: center;
     flex-flow: row wrap;
     height: 80vh;
+    @media screen and (max-width: 1050px){
+      height: fit-content;
+      padding: 50px 0;
+    }
+
+    @media screen and (max-width: 960px){
+      height: unset;
+    }
 
     .feature-box{
       width: fit-content;
       display: flex;
       margin: auto;
 
+      @media screen and (max-width: 960px){
+        flex-flow: row wrap;
+      }
+
+
       .features{
-        padding: 15px;
+        padding: 30px 15px;
         color: $color__white;
         margin: auto 40px;
+        @media screen and (max-width: 1050px){
+          margin: auto 20px;
+        }
+        @media screen and (max-width: 960px){
+          margin: 40px 10px;
+        }
+        @media screen and (max-width: 900px){
+          margin: 40px auto;
+          min-width: 300px;
+        }
+
         width: 270px;
-        height: 300px;
+        height: 350px;
         opacity: 0;
         transform: translateY(100px);
 
