@@ -884,6 +884,20 @@ body {
   display: grid;
   grid-template-rows: 0.1fr 1fr;
   background-color: #fff;
+  opacity: 0.3;
+  transform: translateY(100px);
+  transition: all 1s linear;
+}
+.team h3 {
+  color: #f15a24;
+}
+.team p {
+  color: #f15a24;
+}
+
+.team.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .team h1 {
@@ -907,8 +921,8 @@ body {
   padding: 0.8rem;
   box-sizing: border-box;
   border-radius: 50%;
-  border-left: 1px solid #f15a24;
-  border-right: 1px solid #f15a24;
+  border-left: 1px solid #009245;
+  border-right: 1px solid #009245;
 }
 
 .team figure img:hover {

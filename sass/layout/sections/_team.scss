@@ -2,7 +2,25 @@
     display: grid;
     grid-template-rows: .1fr 1fr;
     background-color: $color__white;
+
+    opacity: 0.3;
+    transform: translateY(100px);
+    transition: all 1s linear;
+
+    h3{
+        color: $color__orange;
+    }
+
+    p{
+        color: $color__orange;
+    }
 }
+
+.team.active{
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .team h1 {
     flex-basis: 100%;
 }
@@ -21,11 +39,12 @@
     padding: 0.8rem;
     box-sizing: border-box;
     border-radius: 50%;
-    border-left: 1px solid $color__orange;
-    border-right: 1px solid $color__orange;
+    border-left: 1px solid $color__green;
+    border-right: 1px solid $color__green;
 }
 .team figure img:hover {
     transform: rotate(90deg);
     transform: scale(1.2);
     transition: all .9s;
 }
+
