@@ -803,30 +803,23 @@ body {
 
 /* TESTIMONIALS SECTION =========== */
 /* TESTIMONIAL IMAGES============= */
-.testimonials .sub-section img {
-  max-width: 30%;
-  height: auto;
-  border-radius: 50%;
-}
-
-.sub-section .testimonials img {
-  position: absolute;
-  bottom: 150px;
-}
-
-/* TESTIMONIAL CONTENT=============== */
-.sub-section {
+.testimonials .sub-section {
   display: flex;
   align-content: center;
   align-self: center;
+  /* TESTIMONIAL TYPOGRAPHY=========== */
+  /* VISIBLITY OF OTHER TESTIMONIALS */
 }
-
-.sub-section .testimonial {
+.testimonials .sub-section img {
+  height: auto;
+  border-radius: 50%;
+}
+.testimonials .sub-section .testimonial {
   width: 300px;
-  height: 400px;
+  height: 500px;
   border-radius: 20px;
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   align-items: center;
   text-align: center;
   background-color: #fff;
@@ -838,28 +831,51 @@ body {
   -moz-box-shadow: 3px 4px 20px 2px #5a1414;
   box-shadow: 3px 4px 20px 2px #5a1414;
 }
-
-.testimonial:hover {
+.testimonials .sub-section .testimonial .icon-box {
+  flex: 1 0 100%;
+  min-width: 125px;
+  max-width: 50%;
+  margin: auto;
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-sizing: border-box;
+}
+.testimonials .sub-section .testimonial .text-info {
+  padding: 10px;
+  flex: 1 0 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+.testimonials .sub-section .testimonial .text-info p {
+  margin: 0;
+}
+.testimonials .sub-section .testimonial:hover {
   background-color: #f15a24;
   color: #fff;
   transition: all 0.9s;
 }
-
-/* TESTIMONIAL TYPOGRAPHY=========== */
-.testimonial p {
+.testimonials .sub-section .testimonial p {
   max-width: 90%;
   margin: auto;
   font-size: 1.2rem;
   margin-bottom: 1rem !important;
 }
-
-.testimonial h3 {
+.testimonials .sub-section .testimonial h3 {
   padding: 0.5rem;
   margin: 0;
   font-size: 1.2rem;
 }
+.testimonials .sub-section .testimonial.testimonial-user4 {
+  display: none;
+}
+.testimonials .sub-section .testimonial.testimonial-user5 {
+  display: none;
+}
+.testimonials .sub-section .testimonial.testimonial-user6 {
+  display: none;
+}
 
-/* VISIBLITY OF OTHER TESTIMONIALS */
 /* TEAM SECTION =========== */
 .team {
   display: grid;
