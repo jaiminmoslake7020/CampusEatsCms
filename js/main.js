@@ -278,6 +278,10 @@ class features extends base{
     init() {
         super.init();
 
+        document.querySelector('.features.feature-1').classList.add('active');
+        document.querySelector('.features.feature-2').classList.add('active');
+        document.querySelector('.features.feature-3').classList.add('active');
+
     }
 
     activate(id) {
@@ -287,6 +291,10 @@ class features extends base{
 
     deActivate(id) {
         super.deActivate(id);
+
+        document.querySelector('.features.feature-1').classList.remove('active');
+        document.querySelector('.features.feature-2').classList.remove('active');
+        document.querySelector('.features.feature-3').classList.remove('active');
 
     }
 
@@ -382,23 +390,23 @@ class scroll extends base{
                         app.topSection.deActivate( "features-content" );
                         break;
                     case "features-content" :
-                        app.activate( selfObject._pageStatus );
-                        app.screens.deActivate( "screen-content" );
-                        app.needs.deActivate( "needs-content" );
+                        app.features.activate( selfObject._pageStatus );
+                        app.needs.deActivate( "screen-content" );
+                        app.screens.deActivate( "needs-content" );
                         break;
                     case "screen-content" :
                         app.screens.activate( selfObject._pageStatus );
-                        app.topSection.deActivate( "testimonials-content" );
-                        app.topSection.deActivate( "features-content" );
+                        app.features.deActivate( "testimonials-content" );
+                        app.testimonials.deActivate( "features-content" );
                         break;
                     case "testimonials-content" :
-                        app.activate( selfObject._pageStatus );
-                        app.topSection.deActivate( "team-content" );
+                        app.testimonials.activate( selfObject._pageStatus );
+                        app.team.deActivate( "team-content" );
                         app.screens.deActivate( "screen-content" );
                         break;
                     case "team-content" :
-                        app.activate( selfObject._pageStatus );
-                        app.topSection.deActivate( "testimonials-content" );
+                        app.team.activate( selfObject._pageStatus );
+                        app.testimonials.deActivate( "testimonials-content" );
                         break;
                 }
 
