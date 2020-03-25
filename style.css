@@ -807,19 +807,34 @@ body {
   display: flex;
   align-content: center;
   align-self: center;
+  overflow-x: hidden;
+  width: 200vw;
+  min-height: 90vh;
+  margin-left: 0;
+  transition: margin-left 1s ease-in-out;
   /* TESTIMONIAL TYPOGRAPHY=========== */
-  /* VISIBLITY OF OTHER TESTIMONIALS */
+}
+.testimonials .sub-section.slide-active-1 {
+  margin-left: -33.33vw;
+}
+.testimonials .sub-section.slide-active-2 {
+  margin-left: -66.66vw;
+}
+.testimonials .sub-section.slide-active-3 {
+  margin-left: -100vw;
 }
 .testimonials .sub-section img {
   height: auto;
   border-radius: 50%;
+  border: 5px solid #009245;
 }
 .testimonials .sub-section .testimonial {
   width: 300px;
-  height: 500px;
+  min-height: 300px;
   border-radius: 20px;
+  box-sizing: border-box;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   align-items: center;
   text-align: center;
   background-color: #fff;
@@ -834,7 +849,7 @@ body {
 .testimonials .sub-section .testimonial .icon-box {
   flex: 1 0 100%;
   min-width: 125px;
-  max-width: 50%;
+  max-width: 75%;
   margin: auto;
   background: white;
   border-radius: 10px;
@@ -851,12 +866,9 @@ body {
   margin: 0;
 }
 .testimonials .sub-section .testimonial:hover {
-  background-color: #f15a24;
-  color: #fff;
   transition: all 0.9s;
 }
 .testimonials .sub-section .testimonial p {
-  max-width: 90%;
   margin: auto;
   font-size: 1.2rem;
   margin-bottom: 1rem !important;
@@ -865,15 +877,6 @@ body {
   padding: 0.5rem;
   margin: 0;
   font-size: 1.2rem;
-}
-.testimonials .sub-section .testimonial.testimonial-user4 {
-  display: none;
-}
-.testimonials .sub-section .testimonial.testimonial-user5 {
-  display: none;
-}
-.testimonials .sub-section .testimonial.testimonial-user6 {
-  display: none;
 }
 
 /* TEAM SECTION =========== */

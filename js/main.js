@@ -325,22 +325,82 @@ class team extends base{
 
 class testimonials extends base{
 
+    get incrrement() {
+        return this._incrrement;
+    }
+
+    set incrrement(value) {
+        this._incrrement = value;
+    }
+
+    get slideNumber() {
+        return this._slideNumber;
+    }
+
+    set slideNumber(value) {
+        this._slideNumber = value;
+    }
+
     constructor() {
         super();
+        this._slideNumber = 1 ;
+        this._incrrement = true ;
+        this._stopInterval = 0 ;
+        this.init();
+    }
+
+    get stopInterval() {
+        return this._stopInterval;
+    }
+
+    set stopInterval(value) {
+        this._stopInterval = value;
     }
 
     init() {
         super.init();
+        let totalSlides = document.getElementById('testimonials-content').querySelector('.sub-section').querySelectorAll('.testimonial').length/2;
+
+        let selfObject = this;
+        console.log( console.trace() );
+        let interval = setInterval(function () {
+            if( selfObject.stopInterval ){
+                clearInterval( interval );
+            }
+            console.log( console.trace() );
+            selfObject.slide( selfObject.slideNumber );
+        },5000);
 
     }
 
     activate(id) {
         super.activate(id);
-        this.init()
     }
 
     deActivate(id) {
         super.deActivate(id);
+    }
+
+    slide( slideNumber ){
+
+        let slideIsActive = false;
+        let testimonials = document.getElementById('testimonials-content').querySelector('.sub-section').querySelectorAll('.testimonial').length/2;
+        for( let i = 0 ; i < testimonials ; i++ ) {
+            if( slideNumber !== i+1 ){
+                document.getElementById('testimonials-content').querySelector('.sub-section').classList.remove('slide-active-'+(i+1));
+            }
+        }
+
+        document.getElementById('testimonials-content').querySelector('.sub-section').classList.add( 'slide-active-'+slideNumber );
+
+        let selfObject = this ;
+        setTimeout(function () {
+            if( selfObject.slideNumber === testimonials ){
+                selfObject.slideNumber = 1;
+            }else{
+                selfObject.slideNumber = selfObject.slideNumber+1;
+            }
+        } , 5000 );
 
     }
 
@@ -387,17 +447,17 @@ class scroll extends base{
                     case "needs-content" :
                         app.needs.activate( selfObject._pageStatus );
                         app.topSection.deActivate( "top-content" );
-                        app.topSection.deActivate( "features-content" );
+                        app.features.deActivate( "features-content" );
                         break;
                     case "features-content" :
                         app.features.activate( selfObject._pageStatus );
-                        app.needs.deActivate( "screen-content" );
-                        app.screens.deActivate( "needs-content" );
+                        app.screens.deActivate( "screen-content" );
+                        app.needs.deActivate( "needs-content" );
                         break;
                     case "screen-content" :
                         app.screens.activate( selfObject._pageStatus );
-                        app.features.deActivate( "testimonials-content" );
-                        app.testimonials.deActivate( "features-content" );
+                        app.testimonials.deActivate( "testimonials-content" );
+                        app.features.deActivate( "features-content" );
                         break;
                     case "testimonials-content" :
                         app.testimonials.activate( selfObject._pageStatus );

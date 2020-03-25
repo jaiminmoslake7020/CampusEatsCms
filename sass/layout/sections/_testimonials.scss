@@ -6,19 +6,39 @@
         display: flex;
         align-content: center;
         align-self: center;
+        overflow-x: hidden;
+        width: 200vw;
+        min-height: 90vh;
+        margin-left: 0;
+        transition: margin-left 1s ease-in-out;
+
+        &.slide-active-1{
+            margin-left: -33.33vw;
+        }
+
+        &.slide-active-2{
+            margin-left: -66.66vw;
+        }
+
+        &.slide-active-3{
+            margin-left: -100vw;
+        }
 
         img {
             height: auto;
             border-radius: 50%;
+            border:5px solid $color__green;
         }
 
         .testimonial {
+
             width: 300px;
-            height: 500px;
+            min-height: 300px;
             border-radius: 20px;
+            box-sizing: border-box;
 
             display: grid;
-            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
             align-items: center;
             text-align: center;
             background-color: $color__white;
@@ -34,7 +54,7 @@
             .icon-box{
                 flex: 1 0  100%;
                 min-width: 125px;
-                max-width: 50%;
+                max-width: 75%;
                 margin: auto;
                 background: white;
                 border-radius: 10px;
@@ -59,15 +79,12 @@
 
 
         .testimonial:hover {
-            background-color: $color__orange;
-            color: $color__white;
             transition: all .9s;
         }
 
         /* TESTIMONIAL TYPOGRAPHY=========== */
 
         .testimonial p {
-            max-width: 90%;
             margin: auto;
             font-size: 1.2rem;
             margin-bottom: 1rem !important;
@@ -76,21 +93,6 @@
             padding: 0.5rem;
             margin: 0;
             font-size: 1.2rem;
-        }
-
-        /* VISIBLITY OF OTHER TESTIMONIALS */
-
-        .testimonial.testimonial-user3 {
-            //display: none;
-        }
-        .testimonial.testimonial-user4 {
-            display: none;
-        }
-        .testimonial.testimonial-user5 {
-            display: none;
-        }
-        .testimonial.testimonial-user6 {
-            display: none;
         }
 
     }
