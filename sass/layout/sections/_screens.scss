@@ -34,6 +34,7 @@
                    text-align: center;
                    margin-top: 0;
                    color: $color__orange;
+                   border:unset;
 
                    background-color: transparent;
                    padding: 15px;
@@ -150,7 +151,9 @@
                top:0;
                left: 0;
                width: 100vh;
-               background-color: $color__orange;
+               color: $color__orange;
+               border:1px solid $color__orange;
+               background-color: $color__white;
                padding: 15px;
                box-sizing: border-box;
                cursor:pointer;

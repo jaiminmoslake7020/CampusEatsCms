@@ -39,10 +39,21 @@ class App extends base{
         return this._needs;
     }
 
+    get features() {
+        return this._features;
+    }
+
+    get team() {
+        return this._team;
+    }
+
+    get testimonials() {
+        return this._testimonials;
+    }
+
     get screens() {
         return this._screens;
     }
-
 
     get scroll() {
         return this._scroll;
@@ -52,6 +63,9 @@ class App extends base{
         super();
         this._topSection = new topSection();
         this._needs = new needs();
+        this._features = new features();
+        this._team = new team();
+        this._testimonials = new testimonials();
         this._screens = new screens();
         this._scroll = new scroll();
 
@@ -255,6 +269,83 @@ class needs extends base{
 
 }
 
+class features extends base{
+
+    constructor() {
+        super();
+    }
+
+    init() {
+        super.init();
+
+        document.querySelector('.features.feature-1').classList.add('active');
+        document.querySelector('.features.feature-2').classList.add('active');
+        document.querySelector('.features.feature-3').classList.add('active');
+
+    }
+
+    activate(id) {
+        super.activate(id);
+        this.init()
+    }
+
+    deActivate(id) {
+        super.deActivate(id);
+
+        document.querySelector('.features.feature-1').classList.remove('active');
+        document.querySelector('.features.feature-2').classList.remove('active');
+        document.querySelector('.features.feature-3').classList.remove('active');
+
+    }
+
+}
+
+class team extends base{
+
+    constructor() {
+        super();
+    }
+
+    init() {
+        super.init();
+
+    }
+
+    activate(id) {
+        super.activate(id);
+        this.init()
+    }
+
+    deActivate(id) {
+        super.deActivate(id);
+
+    }
+
+}
+
+class testimonials extends base{
+
+    constructor() {
+        super();
+    }
+
+    init() {
+        super.init();
+
+    }
+
+    activate(id) {
+        super.activate(id);
+        this.init()
+    }
+
+    deActivate(id) {
+        super.deActivate(id);
+
+    }
+
+}
+
 class scroll extends base{
     constructor() {
         super();
@@ -299,23 +390,23 @@ class scroll extends base{
                         app.topSection.deActivate( "features-content" );
                         break;
                     case "features-content" :
-                        app.activate( selfObject._pageStatus );
-                        app.screens.deActivate( "screen-content" );
-                        app.needs.deActivate( "needs-content" );
+                        app.features.activate( selfObject._pageStatus );
+                        app.needs.deActivate( "screen-content" );
+                        app.screens.deActivate( "needs-content" );
                         break;
                     case "screen-content" :
                         app.screens.activate( selfObject._pageStatus );
-                        app.topSection.deActivate( "testimonials-content" );
-                        app.topSection.deActivate( "features-content" );
+                        app.features.deActivate( "testimonials-content" );
+                        app.testimonials.deActivate( "features-content" );
                         break;
                     case "testimonials-content" :
-                        app.activate( selfObject._pageStatus );
-                        app.topSection.deActivate( "team-content" );
+                        app.testimonials.activate( selfObject._pageStatus );
+                        app.team.deActivate( "team-content" );
                         app.screens.deActivate( "screen-content" );
                         break;
                     case "team-content" :
-                        app.activate( selfObject._pageStatus );
-                        app.topSection.deActivate( "testimonials-content" );
+                        app.team.activate( selfObject._pageStatus );
+                        app.testimonials.deActivate( "testimonials-content" );
                         break;
                 }
 

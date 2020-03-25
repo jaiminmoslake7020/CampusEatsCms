@@ -41,16 +41,21 @@ body {
 
 /* SECTIONS ============ */
 
-/* SCREEN SECTION ============ */
-@import "sections/screens";
-
 /* TOP SECTION ============ */
 @import "sections/top";
 
-/* TOP SECTION ============ */
+/* Needs SECTION ============ */
 @import "sections/needs";
+
+/* Features SECTION ============ */
+@import "sections/features";
+
+/* SCREEN SECTION ============ */
+@import "sections/screens";
+
+/* TESTIMONIALS SECTION =========== */
+@import "sections/testimonials";
 
 /* TEAM SECTION =========== */
 @import "sections/team";
-
 

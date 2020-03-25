@@ -1,0 +1,94 @@
+.features-container{
+  min-height: 90vh;
+
+  .sub-section{
+    display: flex;
+    align-content: center;
+    flex-flow: row wrap;
+    height: 80vh;
+
+    .feature-box{
+      width: fit-content;
+      display: flex;
+      margin: auto;
+
+      .features{
+        padding: 15px;
+        color: $color__white;
+        margin: auto 40px;
+        width: 270px;
+        height: 300px;
+        opacity: 0;
+        transform: translateY(100px);
+
+        background-color: $color__orange;
+        border-radius: 15px;
+
+        box-sizing: border-box;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+
+        -webkit-box-shadow: 18px 28px 16px -25px rgba(241,90,36,0.35);
+        -moz-box-shadow: 18px 28px 16px -25px rgba(241,90,36,0.35);
+        box-shadow: 18px 28px 16px -25px rgba(241,90,36,0.35);
+
+        align-content: center;
+
+        .icon-box{
+          flex: 1 0  100%;
+          min-width: 125px;
+          max-width: 50%;
+          margin: auto;
+          background: white;
+          border-radius: 10px;
+          padding: 15px;
+          box-sizing: border-box;
+        }
+
+        .text-info{
+          padding: 10px;
+          flex: 1 0  100%;
+          text-align: center;
+          box-sizing: border-box;
+
+          p{
+            margin: 0;
+          }
+
+
+        }
+
+        &.feature-1{
+          transition: transform .5s linear 1s, opacity .5s linear 1s,  box-shaddow  1s linear   ;
+        }
+
+        &.feature-2{
+          transition: transform .5s linear 1.2s, opacity .5s linear 1.2s,  box-shaddow  1s linear  ;
+        }
+
+        &.feature-3{
+          transition: transform .5s linear 1.6s, opacity .5s linear 1.6s, box-shaddow  1s linear  ;
+        }
+
+
+        &.active{
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        &:hover{
+
+          -webkit-box-shadow: 0px 39px 40px -11px $color_bs;
+          -moz-box-shadow: 0px 39px 40px -11px $color_bs;
+          box-shadow: 0px 39px 40px -11px $color_bs;
+
+        }
+
+
+      }
+    }
+
+  }
+
+}
