@@ -1084,14 +1084,14 @@ body {
   transition: margin-left 1s ease-in-out;
   /* TESTIMONIAL TYPOGRAPHY=========== */
 }
-@media screen and (max-width: 600px) {
-  .testimonials .sub-section {
-    width: 600vw;
-  }
-}
 @media screen and (max-width: 900px) {
   .testimonials .sub-section {
     width: 300vw;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .testimonials .sub-section {
+    min-height: 600px;
   }
 }
 @media screen and (max-width: 900px) {
@@ -1099,43 +1099,48 @@ body {
     min-height: unset;
   }
 }
+@media screen and (max-width: 600px) {
+  .testimonials .sub-section {
+    width: 600vw;
+  }
+}
 .testimonials .sub-section.slide-active-1 {
   margin-left: -33.33vw;
-}
-@media screen and (max-width: 600px) {
-  .testimonials .sub-section.slide-active-1 {
-    margin-left: -100vw;
-  }
 }
 @media screen and (max-width: 900px) {
   .testimonials .sub-section.slide-active-1 {
     margin-left: -50vw;
   }
 }
+@media screen and (max-width: 600px) {
+  .testimonials .sub-section.slide-active-1 {
+    margin-left: -100vw;
+  }
+}
 .testimonials .sub-section.slide-active-2 {
   margin-left: -66.66vw;
-}
-@media screen and (max-width: 600px) {
-  .testimonials .sub-section.slide-active-2 {
-    margin-left: -200vw;
-  }
 }
 @media screen and (max-width: 900px) {
   .testimonials .sub-section.slide-active-2 {
     margin-left: -100vw;
   }
 }
+@media screen and (max-width: 600px) {
+  .testimonials .sub-section.slide-active-2 {
+    margin-left: -200vw;
+  }
+}
 .testimonials .sub-section.slide-active-3 {
   margin-left: -100vw;
-}
-@media screen and (max-width: 600px) {
-  .testimonials .sub-section.slide-active-3 {
-    margin-left: -300vw;
-  }
 }
 @media screen and (max-width: 900px) {
   .testimonials .sub-section.slide-active-3 {
     margin-left: -150vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  .testimonials .sub-section.slide-active-3 {
+    margin-left: -300vw;
   }
 }
 .testimonials .sub-section img {
@@ -1282,16 +1287,16 @@ footer {
   max-width: 98%;
   margin: auto;
 }
-@media screen and (max-width: 600px) {
-  .footer-class {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, auto);
-  }
-}
 @media screen and (max-width: 900px) {
   .footer-class {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, auto);
+  }
+}
+@media screen and (max-width: 600px) {
+  .footer-class {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
   }
 }
 
@@ -1327,16 +1332,16 @@ footer {
 .footer-information {
   align-items: center;
 }
-@media screen and (max-width: 600px) {
-  .footer-information {
-    grid-column: 1;
-    grid-row: 2;
-  }
-}
 @media screen and (max-width: 900px) {
   .footer-information {
     grid-column: 2;
     grid-row: 1;
+  }
+}
+@media screen and (max-width: 600px) {
+  .footer-information {
+    grid-column: 1;
+    grid-row: 2;
   }
 }
 .footer-information a {
@@ -1381,16 +1386,16 @@ footer {
   grid-column: 2;
   grid-row: 2;
 }
-@media screen and (max-width: 600px) {
-  .footer-icons {
-    grid-column: 1;
-    grid-row: 3;
-  }
-}
 @media screen and (max-width: 900px) {
   .footer-icons {
     grid-column: -1/1;
     grid-row: 4;
+  }
+}
+@media screen and (max-width: 600px) {
+  .footer-icons {
+    grid-column: 1;
+    grid-row: 3;
   }
 }
 .footer-icons ul {
@@ -1409,17 +1414,17 @@ footer {
   grid-column: 2;
   grid-row: 3;
 }
+@media screen and (max-width: 900px) {
+  .footer-copyright {
+    grid-column: -1/1;
+    grid-row: 5;
+  }
+}
 @media screen and (max-width: 600px) {
   .footer-copyright {
     grid-column: 1;
     grid-row: 5;
     margin-bottom: 20px;
-  }
-}
-@media screen and (max-width: 900px) {
-  .footer-copyright {
-    grid-column: -1/1;
-    grid-row: 5;
   }
 }
 
@@ -1434,16 +1439,16 @@ footer {
   padding-bottom: 1rem;
 }
 
-@media screen and (max-width: 600px) {
-  .footer-contact {
-    grid-column: 1;
-    grid-row: 4;
-  }
-}
 @media screen and (max-width: 900px) {
   .footer-contact {
     grid-column: -1/1;
     grid-row: 3;
+  }
+}
+@media screen and (max-width: 600px) {
+  .footer-contact {
+    grid-column: 1;
+    grid-row: 4;
   }
 }
 

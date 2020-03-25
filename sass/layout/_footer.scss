@@ -7,14 +7,15 @@ footer{
 .footer-class {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    @media screen and (max-width: 600px){
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(3, auto);
-    }
     @media screen and (max-width: 900px){
         grid-template-columns: repeat(2 ,1fr);
         grid-template-rows: repeat(2, auto);
     }
+    @media screen and (max-width: 600px){
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+    }
+
     grid-gap: 0.7rem;
     padding-top: 2rem;
     max-width: 98%;
@@ -49,14 +50,15 @@ footer{
 
 .footer-information {
     align-items: center;
-    @media screen and (max-width: 600px){
-        grid-column: 1;
-        grid-row: 2;
-    }
     @media screen and (max-width: 900px){
         grid-column: 2;
         grid-row: 1;
     }
+    @media screen and (max-width: 600px){
+        grid-column: 1;
+        grid-row: 2;
+    }
+
 
     a{
         max-width: 200px;
@@ -109,13 +111,14 @@ footer{
     justify-content: center;
     grid-column: 2;
     grid-row: 2;
-    @media screen and (max-width: 600px){
-        grid-column: 1;
-        grid-row: 3;
-    }
+
     @media screen and (max-width: 900px){
         grid-column: -1/1;
         grid-row: 4;
+    }
+    @media screen and (max-width: 600px){
+        grid-column: 1;
+        grid-row: 3;
     }
 
     ul{
@@ -140,14 +143,14 @@ footer{
 .footer-copyright {
     grid-column: 2;
     grid-row: 3;
+    @media screen and (max-width: 900px){
+        grid-column: -1/1;
+        grid-row: 5;
+    }
     @media screen and (max-width: 600px){
         grid-column: 1;
         grid-row: 5;
         margin-bottom: 20px;
-    }
-    @media screen and (max-width: 900px){
-        grid-column: -1/1;
-        grid-row: 5;
     }
 }
 .footer-copyright  p {
@@ -163,12 +166,15 @@ footer{
 }
 
 .footer-contact{
-    @media screen and (max-width: 600px){
-        grid-column: 1;
-        grid-row: 4;
-    }
+
     @media screen and (max-width: 900px){
         grid-column: -1/1;
         grid-row: 3;
     }
+
+    @media screen and (max-width: 600px){
+        grid-column: 1;
+        grid-row: 4;
+    }
+
 }

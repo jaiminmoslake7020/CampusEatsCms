@@ -9,46 +9,52 @@
         overflow-x: hidden;
         width: 200vw;
         padding-bottom: 30px;
-        @media screen and (max-width: 600px){
-            width: 600vw;
-        }
         @media screen and (max-width: 900px){
             width: 300vw;
         }
         min-height: 90vh;
+        @media screen and (max-width: 1024px){
+            min-height: 600px;
+        }
         @media screen and (max-width: 900px){
             min-height: unset;
+        }
+        @media screen and (max-width: 600px){
+            width: 600vw;
         }
         margin-left: 0;
         transition: margin-left 1s ease-in-out;
 
         &.slide-active-1{
             margin-left: -33.33vw;
-            @media screen and (max-width: 600px){
-                margin-left: -100vw;
-            }
+
             @media screen and (max-width: 900px){
                 margin-left: -50vw;
+            }
+            @media screen and (max-width: 600px){
+                margin-left: -100vw;
             }
         }
 
         &.slide-active-2{
             margin-left: -66.66vw;
-            @media screen and (max-width: 600px){
-                margin-left: -200vw;
-            }
+
             @media screen and (max-width: 900px){
                 margin-left: -100vw;
+            }
+            @media screen and (max-width: 600px){
+                margin-left: -200vw;
             }
         }
 
         &.slide-active-3{
             margin-left: -100vw;
-            @media screen and (max-width: 600px){
-                margin-left: -300vw;
-            }
+
             @media screen and (max-width: 900px){
                 margin-left: -150vw;
+            }
+            @media screen and (max-width: 600px){
+                margin-left: -300vw;
             }
         }
 
